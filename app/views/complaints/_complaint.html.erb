@@ -1,3 +1,1 @@
-<li><%= @complaint.created_at %></li>
-<li><%= @company.name %></li>
-<li><%= @complaint.detail %></li>
+<li><strong><%= @company.name %>: </strong> <%= @complaint.detail %> <small class="text-muted"> created at:<%= @complaint.created_at %></small></li>

@@ -4,7 +4,7 @@
 <hr>
 <% @complaint.each do |complaint| %>
   <% if (@company.id == complaint.company_id) %>
-  <div id="detail">
+  <div class="table" id="detail">
     <li><%= complaint.detail %></li>
   </div>
   <% end %>
