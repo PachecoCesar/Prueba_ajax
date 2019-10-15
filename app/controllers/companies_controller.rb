@@ -12,7 +12,8 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-
+    @company = Company.find(params[:id])
+    @complaint = Complaint.all.order("created_at DESC")
   end
 
   # GET /companies/new
