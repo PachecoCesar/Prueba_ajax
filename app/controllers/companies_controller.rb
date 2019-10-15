@@ -47,9 +47,8 @@ class CompaniesController < ApplicationController
   def update
     respond_to do |format|
       if @company.update(company_params)
-        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to root_path @company, notice: 'Company was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
-        format.js
       else
         format.html { render :edit }
         format.json { render json: @company.errors, status: :unprocessable_entity }
